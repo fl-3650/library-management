@@ -3,7 +3,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .smarttomcat
-src/main/resources/database.properties
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
