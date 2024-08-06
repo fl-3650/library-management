@@ -24,7 +24,6 @@ public class BookController {
     @GetMapping()
     public String index(@NotNull Model model) {
         model.addAttribute("books", bookDAO.index());
-        System.out.println("Books retrieved: " + model.getAttribute("books"));
         return "books/index";
     }
 
