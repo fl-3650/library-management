@@ -1,17 +1,15 @@
 package ru.repilov.library.models;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class Person {
     private int id;
 
-    @NotEmpty(message = "Name should not be empty")
-    @Size(min = 2, max = 30, message = "Name should be between 2 and 30 characters")
+    @NotEmpty(message = "Name must not be empty")
+    @Size(min = 2, max = 50, message = "Name must be between 2 and 50 characters")
     private String fullName;
 
-    @Min(value = 1900, message = "FIXME")
     private int yearOfBirth;
 
     public Person() {
@@ -45,5 +43,14 @@ public class Person {
 
     public void setYearOfBirth(int yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", yearOfBirth=" + yearOfBirth +
+                '}';
     }
 }
